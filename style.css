@@ -35,7 +35,13 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+.player-image {
+  transition: all 1s ease 0s;
+}
+
 .player-controls {
+  position: relative;
+  z-index: 3;
   background: -webkit-linear-gradient(
     34deg,
     rgb(129 129 129),
@@ -76,6 +82,7 @@ body {
 .control {
   width: 35px;
   height: 35px;
+  transition: filter 0.4s;
 }
 
 .control:hover {
