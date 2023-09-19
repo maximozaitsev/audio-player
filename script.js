@@ -33,6 +33,7 @@ nextButton.addEventListener("click", function () {
   const nextSong = songList[currentSongIndex];
   audio.src = nextSong.path;
   audio.currentTime = 0;
+  progressBar.value = 0;
   if (isPlaying) {
     audio.play();
   }
@@ -105,7 +106,31 @@ const songList = [
   {
     path: "./audio/dontstartnow.mp3",
     cover: "./img/dontstartnow.png",
-    title: "Dua Lipa",
-    artist: "Don't Start Now",
+    title: "Don't Start Now",
+    artist: "Dua Lipa",
+  },
+  {
+    path: "./audio/castle_in_the_snow.mp3",
+    cover: "./img/castle.webp",
+    title: "Castle in the snow",
+    artist: "Kadebostany",
+  },
+  {
+    path: "./audio/dance_monkey.mp3",
+    cover: "./img/dance_monkey.jpeg",
+    title: "Dance Monkey",
+    artist: "Tones and I",
+  },
+  {
+    path: "./audio/snowman.mp3",
+    cover: "./img/snowman.webp",
+    title: "Snowman",
+    artist: "Sia",
+  },
+  {
+    path: "./audio/paint_the_town_red.mp3",
+    cover: "./img/devil.jpeg",
+    title: "She's devil",
+    artist: "Doja Cat",
   },
 ];
