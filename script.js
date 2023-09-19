@@ -1,6 +1,7 @@
 const playButton = document.getElementById("play");
 const audio = new Audio("./audio/beyonce.mp3");
 const image = document.querySelector(".player-image");
+const progressBar = document.getElementById("progress-bar");
 
 let currentScale = 1.0;
 
@@ -26,6 +27,7 @@ audio.addEventListener("timeupdate", function () {
   const seconds = Math.floor(currentTime % 60);
   const formattedTime = `${minutes}:${seconds.toString().padStart(2, "0")}`;
   currentTimeDisplay.textContent = formattedTime;
+  progressBar.value = (currentTime / audio.duration) * 100;
 });
 
 const durationTimeDisplay = document.querySelector(".duration-time");
@@ -38,4 +40,15 @@ audio.addEventListener("loadedmetadata", function () {
     .toString()
     .padStart(2, "0")}`;
   durationTimeDisplay.textContent = formattedDuration;
+});
+
+progressBar.addEventListener("input", function () {
+  // Получаем значение ползунка в процентах
+  const seekToPercent = progressBar.value;
+
+  // Вычисляем время, на которое нужно перемотать песню
+  const seekToTime = (seekToPercent / 100) * audio.duration;
+
+  // Устанавливаем время воспроизведения на выбранное
+  audio.currentTime = seekToTime;
 });
