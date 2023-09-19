@@ -82,3 +82,16 @@ body {
   cursor: pointer;
   filter: invert(1);
 }
+
+.current-time {
+  position: absolute;
+  left: 65px;
+  bottom: 35px;
+  font-size: 14px;
+}
+.duration-time {
+  position: absolute;
+  right: 65px;
+  bottom: 35px;
+  font-size: 14px;
+}
