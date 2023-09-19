@@ -36,6 +36,8 @@ body {
 }
 
 .player-image {
+  width: 350px;
+  height: 360px;
   transition: all 1s ease 0s;
 }
 
@@ -104,13 +106,13 @@ input[type="range"]::-webkit-slider-thumb {
 
 .current-time {
   position: absolute;
-  left: 65px;
+  left: 40px;
   bottom: 35px;
   font-size: 14px;
 }
 .duration-time {
   position: absolute;
-  right: 65px;
+  right: 40px;
   bottom: 35px;
   font-size: 14px;
 }
