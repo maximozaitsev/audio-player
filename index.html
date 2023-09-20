@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./svg/favicon2.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./svg/favicon2.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="background">
+      <img class="background-image" src="./img/lemonade.png" alt="img" />
+      <div class="player-container">
+        <img class="player-image" src="./img/lemonade.png" alt="player image" />
+        <div class="player-controls">
+          <div class="song">Don't Hurt Yourself</div>
+          <div class="author">Beyonce</div>
+          <input type="range" id="progress-bar" value="0" />
+          <div class="current-time">0:00</div>
+          <div class="duration-time">3:00</div>
+          <div class="controls-container">
+            <img
+              class="control"
+              id="previous"
+              src="./svg/backward.png"
+              alt="backward"
+            />
+            <img class="control" id="play" src="./svg/play.png" alt="play" />
+            <img
+              class="control"
+              id="next"
+              src="./svg/forward.png"
+              alt="forward"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
